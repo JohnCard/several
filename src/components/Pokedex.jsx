@@ -47,7 +47,7 @@ export default function Pokedex() {
     <Box
       component="form"
       sx={{
-        '& > :not(style)': { m: 1, width: '25ch', marginLeft: 30, marginTop: 5 },
+        '& > :not(style)': { m: 0, width: '25ch', marginLeft: 30, marginTop: 5 },
       }}
       noValidate
       autoComplete="off"
@@ -71,15 +71,17 @@ export default function Pokedex() {
             width: 500, 
             marginLeft: 40, 
             marginTop: 5, 
-            marginBottom: 5}}>
+            marginBottom: 5,
+            boxShadow: 20
+            }}>
             <CardMedia
-                sx={{ height: 400, border: 2, borderRadius: 1, backgroundColor: 'darkgrey' }}
+                sx={{ height: 500, border: 2, borderRadius: 1, backgroundColor: 'cyan' }}
                 image={pokemonData.sprites['front_default']}
                 title={pokemon}
             />
-            <CardContent >
+            <CardContent>
                 <Typography gutterBottom variant="h3">
-                    Name: {pokemonData.name}
+                    {pokemonData.name.toUpperCase()}
                 </Typography>
                 <Typography gutterBottom variant="h4">
                     Pokemon primary key: {pokemonData.id}
@@ -94,10 +96,13 @@ export default function Pokedex() {
                     Experience: {pokemonData.base_experience} years
                 </Typography>
                 <Typography gutterBottom variant="h4">
-                    Oder: {pokemonData.order}
+                    Order: {pokemonData.order}
                 </Typography>
                 <Typography gutterBottom variant="h4">
                     Weight: {pokemonData.weight}
+                </Typography>
+                <Typography gutterBottom variant="h5">
+                    Moves: {pokemonData.moves.map(move => move.move.name + ', ')}
                 </Typography>
             </CardContent>
         </Card>
