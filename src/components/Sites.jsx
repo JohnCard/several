@@ -1,14 +1,13 @@
 import { barcelona, roma, paris, londres } from './info'
 import * as React from 'react';
 import { useState } from 'react';
-import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import MenuList from '@mui/material/MenuList';
 import MenuItem from '@mui/material/MenuItem';
 import Paper from '@mui/material/Paper';
-import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
-
+import Skeleton from '@mui/material/Skeleton';
+import Stack from '@mui/material/Stack';
 const cities = [barcelona, roma, paris, londres]
 let context = {}
 
@@ -62,22 +61,17 @@ export default function Sites() {
         </MenuItem>
       </MenuList>
     </Paper>
-    {city &&  <Box sx={{ width: 200, marginLeft: 5, marginBottom: 6 }}>
-      <Stack spacing={{ xs: 1, sm: 2 }} direction="row" useFlexGap flexWrap="wrap">
-        <Item>
-          <Typography variant="h3" gutterBottom sx={{ width: 600 }} >{city.title}</Typography>
-        </Item>
-        <Item>
-          <Typography variant="h3" gutterBottom sx={{ width: 1000 }} >{city.subtitle}</Typography>
-        </Item>
-        <Item>
-          <Typography variant="h3" gutterBottom sx={{ width: 600 }} >{city.price}</Typography>
-        </Item>
-        <Item>
-          <Typography variant="h4" gutterBottom sx={{ width: 1200 }} >{city.text}</Typography>
-        </Item>
-      </Stack>
-    </Box>}
+    {city && <Stack spacing={1}>
+      {/* For variant="text", adjust the height via font-size */}
+      <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
+
+      {/* For other variants, adjust the size with `width` and `height` */}
+      <Skeleton variant="circular" width={40} height={40} />
+      <Skeleton variant="rectangular" width={210} height={60} />
+      <Skeleton variant="rounded" width={210} height={60} />
+    </Stack>
+
+    }
     </>
   );
 }

@@ -12,6 +12,7 @@ import App from './App'
 import WeatherForm from './components/WeatherForm'
 import Movies from './components/Movies'
 import Sites from './components/Sites'
+import Pokedex from './components/Pokedex';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -23,6 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path='/weather' element={<WeatherForm/>} />
           <Route path='/movies' element={<Movies/>} />
           <Route path='/cities' element={<Sites/>} />
+          <Route path='/pokedex' element={<Pokedex/>} />
         </Route>
       </Routes>
       </BrowserRouter>

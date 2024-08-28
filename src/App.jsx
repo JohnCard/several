@@ -46,6 +46,12 @@ export default function App() {
             label="cities" 
             icon={<TheatersIcon />} 
           />
+          <BottomNavigationAction
+            component={Link}
+            to="/pokedex"
+            label="pokedex" 
+            icon={<TheatersIcon />} 
+          />
         </BottomNavigation>
       </Box>
       <Outlet />

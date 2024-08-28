@@ -5,7 +5,7 @@ import { useState } from "react"
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 // define yout api key 
-let api_key = import.meta.env.VITE_API_KEY
+let api_key = '865d9c05a8c04703b68184104242507'
 // apply your api key for main url
 const API_WEATHER = `http://api.weatherapi.com/v1/current.json?key=${api_key}&q=`
 
