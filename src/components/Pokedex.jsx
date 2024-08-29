@@ -20,7 +20,7 @@ export default function Pokedex() {
         const apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
 
         // Usamos fetch para hacer la solicitud a la API
-        fetch(apiUrl+pokemon)
+        fetch(apiUrl+pokemon.toLowerCase())
         .then(response => {
             // Verificamos si la respuesta es exitosa
             if (!response.ok) {
