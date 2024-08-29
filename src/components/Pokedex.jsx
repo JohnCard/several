@@ -68,19 +68,19 @@ export default function Pokedex() {
     </Box>
     {
         pokemonData.sprites && <Card sx={{ 
-            width: 500, 
-            marginLeft: 40, 
+            width: 950, 
+            marginLeft: 20, 
             marginTop: 5, 
             marginBottom: 5,
             boxShadow: 20
             }}>
             <CardMedia
-                sx={{ height: 500, border: 2, borderRadius: 1, backgroundColor: 'cyan' }}
+                sx={{ height: 850, border: 2, borderRadius: 1, backgroundColor: 'cyan' }}
                 image={pokemonData.sprites['front_default']}
                 title={pokemon}
             />
             <CardContent>
-                <Typography gutterBottom variant="h3">
+                <Typography gutterBottom variant="h3" sx={{marginLeft: 45}}>
                     {pokemonData.name.toUpperCase()}
                 </Typography>
                 <Typography gutterBottom variant="h4">
