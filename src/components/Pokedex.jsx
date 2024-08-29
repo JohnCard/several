@@ -80,25 +80,25 @@ export default function Pokedex() {
                 title={pokemon}
             />
             <CardContent>
-                <Typography gutterBottom variant="h3" sx={{marginLeft: 45}}>
+                <Typography gutterBottom variant="h2" sx={{marginLeft: 45, fontWeight: 500}}>
                     {pokemonData.name.toUpperCase()}
                 </Typography>
-                <Typography gutterBottom variant="h4">
+                <Typography gutterBottom variant="h3">
                     Pokemon primary key: {pokemonData.id}
                 </Typography>
-                <Typography gutterBottom variant="h4">
+                <Typography gutterBottom variant="h3">
                     Default: {String(pokemonData.is_default)}
                 </Typography>
-                <Typography gutterBottom variant="h4">
+                <Typography gutterBottom variant="h3">
                     Height: {pokemonData.height} mm
                 </Typography>
-                <Typography gutterBottom variant="h4">
+                <Typography gutterBottom variant="h3">
                     Experience: {pokemonData.base_experience} years
                 </Typography>
-                <Typography gutterBottom variant="h4">
+                <Typography gutterBottom variant="h3">
                     Order: {pokemonData.order}
                 </Typography>
-                <Typography gutterBottom variant="h4">
+                <Typography gutterBottom variant="h3">
                     Weight: {pokemonData.weight}
                 </Typography>
                 <Typography gutterBottom variant="h5">
